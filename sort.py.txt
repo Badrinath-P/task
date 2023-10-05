@@ -1,0 +1,19 @@
+def custom_sort(lst):
+    # Calculate the midpoint of the list
+    mid = len(lst) // 2
+
+    # Sort the first half in ascending order
+    first_half = sorted(lst[:mid])
+
+    # Sort the second half in descending order
+    second_half = sorted(lst[mid:], reverse=True)
+
+    # Combine the two sorted halves
+    result = first_half + second_half
+
+    return result
+
+# Example usage
+input_list = [3, 7, 1, 4, 9, 2, 8, 5]
+sorted_list = custom_sort(input_list)
+print(sorted_list)
